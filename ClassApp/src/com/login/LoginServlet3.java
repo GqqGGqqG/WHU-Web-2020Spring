@@ -1,5 +1,5 @@
 package com.login;
-
+import com.database.login.checkLogin;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -33,8 +33,9 @@ public class LoginServlet3 extends HttpServlet {
         // 获取用户名和密码
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        String checkRes = checkLogin.checkWith(username, password);
         
-        if ("haha".equals(username) && "123".equals(password)) {
+        if (checkRes!=null) {
             // 将用户信息保存到session中
             request.getSession().setAttribute("username", username);
 

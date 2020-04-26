@@ -50,7 +50,7 @@
                 <div class="content">
                   <form  action="/ClassApp/LoginServlet3" method="post">
                     <div class="form-group">
-                      <input id="login-username" type="text" name="username" required data-msg="请输入用户名" placeholder="用户名" value="admin" class="input-material">
+                      <input id="login-username" type="text" name="username" required data-msg="请输入用户名" placeholder="用户名"  class="input-material">
                       <font color="red">${requestScope.error}</font>
                     </div>
                     <div class="form-group">
